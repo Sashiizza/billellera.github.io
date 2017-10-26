@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title>Billellera Delegate Pool</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     	<link href="https://bootswatch.com/flatly/bootstrap.min.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -8,6 +9,8 @@
     </head>
     <body ng-app="delegateApp" ng-controller="indexCtrl">
         <div class="container">
+            <h1>Billellera Delegate Pool (<a href="https://explorer.kapu.one/address/K8rdGShRUzf91HievJiojHEV6HkSVFVCr1" target="_blank">Explorer</a>, <a href="" target="_blank">Proposal</a>)</h1>
+            <div class="alert alert-info" role="alert">Sharing daily 30% of forged amount to voters; vote for delegate billellera to receive a reward in the next week.</div>
 
             <div class="row">
                 <div class="col-md-4">
@@ -35,6 +38,8 @@
                 <thead>
                     <tr>
                         <th>Address</th>
+                        <th>Paid (KAPU)</th>
+                        <th>Pending (KAPU)</th>
                 </thead>
                 <tbody>
                     <tr ng-repeat="acc in (accounts|orderBy:'-received')">
